@@ -6,16 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && prettier --check \"**/*.+(js|json|css|md|mdx)\"",
+    "format": "prettier --write \"**/*.+(js|json|css|md|mdx)\"",
+    "postinstall": "husky install"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.1-alpha.32",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/material": "^5.0.1",
+    "@mui/styles": "^5.0.1",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "husky": "^7.0.2",
+    "prettier": "^2.4.1"
   }
 }
