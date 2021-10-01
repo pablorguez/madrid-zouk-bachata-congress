@@ -1,17 +1,21 @@
-import { Container, Hidden } from '@mui/material';
+import { Hidden } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from '../../config/theme';
 import Menu from '../../components/Menu';
 import MenuMobile from '../../components/MenuMobile';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Hidden xsDown>
-        <Menu />
-      </Hidden>
-      <Hidden smUp>
-        <MenuMobile />
-      </Hidden>
-      <Container maxWidth="xl">{children}</Container>
+      <ThemeProvider theme={theme}>
+        <Hidden xsDown>
+          <Menu />
+        </Hidden>
+        <Hidden smUp>
+          <MenuMobile />
+        </Hidden>
+        <div>{children}</div>
+      </ThemeProvider>
     </>
   );
 };
