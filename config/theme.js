@@ -5,11 +5,16 @@ const theme = createTheme({
     background: {
       main: '#252838',
     },
+    accent: {
+      main: '#b6a158',
+    },
+    text: '#f0f0f0',
+    button: '#f0f0f0',
     tonalOffset: 0.2,
   },
   typography: {
     fontFamily: [
-      'Cerebri Sans',
+      '"Cerebri Sans"',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
